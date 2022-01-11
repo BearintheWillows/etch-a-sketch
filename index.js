@@ -1,4 +1,5 @@
 const container = document.querySelector('.container')
+const resetBtn = document.querySelector('button')
 let gridSquare
 let divs = []
 let divRow = 65
@@ -42,12 +43,19 @@ const elements = document.querySelectorAll('.grid-square')
 
 elements.forEach(element => {
     element.addEventListener('mouseover', (e) => {
-        console.log('someone hit', element)
         element.style.background = 'blue'
 
-        setTimeout(() => {
-            element.style.background = 'white'
-        }, 400)
+        // setTimeout(() => {
+        //     element.style.background = 'white'
+        // }, 400)
             
     })
 })
+
+function reset() {
+        elements.forEach(element => {
+            element.style.background = 'white'
+        })
+}
+
+resetBtn.addEventListener('click', reset)
