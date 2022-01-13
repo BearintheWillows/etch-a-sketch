@@ -4,6 +4,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    width: 100vw
 }
 
 button {
@@ -12,17 +14,22 @@ button {
 }
 
 .container {
-    display: grid;
+    display: flex;
     width: 95%;
-    height: 100%;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    height: 87%;
     border-style: solid;
-    
+    flex-direction: column;
+
+}
+.row {
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    flex: 1 1 auto;
 }
 
 .grid-square {
-    padding: 23.5%;
-    border-color: black;
-    
+    flex: 1 1 auto;
+
 }
+
